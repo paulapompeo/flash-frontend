@@ -50,8 +50,7 @@ const CreateEmployee = () => {
     const data = { name, lastName, cpf, email };
 
     await api.post(`companies/${params.company}/employees`, data).then(() => {
-      // alert('Cadastro realizado com sucesso!');
-      // history.push('/companies/${params.company}/employees');
+
       history.goBack();
     }).catch(() => {
       // alert('Erro no cadastro');
@@ -104,7 +103,7 @@ const CreateEmployee = () => {
             <button type="submit">Enviar</button>
           </S.InputContainer>
         </S.Form>
-        <Link to="/companies">
+        <Link to="/">
           <FiChevronLeft size={20} />
             Voltar
         </Link>

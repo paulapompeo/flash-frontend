@@ -58,7 +58,7 @@ const Employees = () => {
           
         <Table dataSource={employee} columns={columns} />
         
-        <Link to="/companies">
+        <Link to="/">
           <FiChevronLeft size={20} />
             Voltar
         </Link>

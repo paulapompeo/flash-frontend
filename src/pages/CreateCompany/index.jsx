@@ -40,16 +40,15 @@ const CreateCompany = () => {
 
     const data = { name, trade, cnpj, address, benefits };
 
-    console.log('passou aqui 1')
     await api.post('companies', data).then(() => {
       alert('Cadastro realizado com sucesso!');
     }).catch(() => {
       // alert('Erro no cadastro');
     });
-    console.log('passou aqui 2')
+
 
     alert('Empresa cadastrada')
-    history.push('/companies');
+    history.push('/');
   }
 
   return (
@@ -114,7 +113,7 @@ const CreateCompany = () => {
             <button type="submit">Enviar</button>
           </S.InputContainer>
         </S.Form>
-        <Link to="/companies">
+        <Link to="/">
           <FiChevronLeft size={20} />
             Voltar
         </Link>
